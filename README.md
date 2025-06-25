@@ -13,6 +13,10 @@ Run `npm start`. You should be presented with a CLI helper indicating what is ne
 
 As an example `tsx src/index.ts example-boards output.json` will read the `example-boards` and output the result to `output.json`.
 
-## Running Test
+## Running HTTP server
 
-Run `npm test`
+Run `npm server`. The server will start and be accessible on `http://localhost:3000/boards`.
+
+## Running Tests
+
+Run `npm test` will execute the test suite in vitest.
