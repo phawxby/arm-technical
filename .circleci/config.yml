@@ -1,0 +1,24 @@
+version: 2.1
+
+# https://circleci.com/docs/using-matrix-jobs/#use-matrix-jobs-to-run-multiple-os-tests
+
+jobs:
+  test:
+    parameters:
+      os:
+        type: executor
+    executor: << parameters.os >>
+    steps:
+      - checkout
+      - install
+      - run:
+          name: "Run tests"
+          command: "npm test"
+
+workflows:
+  all-tests:
+    jobs:
+      - test:
+          matrix:
+            parameters:
+              os: [docker, linux, macos, "windows"]
