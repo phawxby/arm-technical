@@ -42,10 +42,10 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: npm test
+          command: npm run test
       - run:
           name: Execute script
-          command: npm start example-boards output.json
+          command: npm run merge example-boards output.json
 
 workflows:
   all-tests:

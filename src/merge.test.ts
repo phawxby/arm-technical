@@ -30,7 +30,11 @@ it("should throw an error on no files found", async () => {
 
 describe("with files", () => {
   beforeEach(() => {
-    readdirSpy.mockResolvedValue(["file1.json", "file2.json", "file3.json"]);
+    readdirSpy.mockResolvedValue([
+      "file1.json",
+      "file2.json",
+      "file3.json",
+    ] as any);
   });
 
   it("should throw an error on bad json", () => {
