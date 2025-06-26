@@ -1,15 +1,6 @@
 import * as Fs from "node:fs/promises";
 
-import {
-  afterAll,
-  beforeAll,
-  beforeEach,
-  describe,
-  expect,
-  it,
-  vitest,
-} from "vitest";
-import { inputFileSchema } from "./schema.js";
+import { beforeEach, describe, expect, it, vitest } from "vitest";
 import { merge } from "./merge.js";
 
 vitest.mock("node:fs/promises", { spy: true });
